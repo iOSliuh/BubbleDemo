@@ -7,7 +7,6 @@
 //
 
 #import "Bubble.h"
-#import "AppDelegate.h"
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 @implementation Bubble{
@@ -41,17 +40,18 @@
     _radius = randomRadius;
     
     leftOrRight = [self arc4randomFrom:0 to:1];
-    _point = CGPointMake(leftOrRight==0?_radius/140:-_radius/140, - _radius/50);
+    _point = CGPointMake(leftOrRight==0?0.6:-0.6, - 1.4);
+  //  _point = CGPointMake(leftOrRight==0?30/_radius:-30/_radius, - 2*30/_radius);
     
 }
 
-//- (void)drawRect:(CGRect)rect {
 - (void)drawBubble {
     
-    int y = [self arc4randomFrom:0 to:_radius*2];
-    _bubble = [[UIView alloc] initWithFrame:CGRectMake(leftOrRight==0?0:SCREEN_WIDTH-_radius*2,SCREEN_HEIGHT - y, _radius*2, _radius*2)];
+    int y = [self arc4randomFrom:_radius*2 to:_radius*6];
+
+    _bubble = [[UIView alloc] initWithFrame:CGRectMake(leftOrRight==0?-2*_radius:SCREEN_WIDTH,SCREEN_HEIGHT - y, _radius*2, _radius*2)];
     _bubble.layer.cornerRadius = _radius;
-    _bubble.backgroundColor = [UIColor colorWithWhite:0.6 alpha:0.6];
+    _bubble.backgroundColor = [UIColor colorWithWhite:0.7 alpha:0.35];
     [self addSubview:_bubble];
 }
 
@@ -60,15 +60,24 @@
     _bubble.center = CGPointMake(_bubble.center.x + _point.x, _bubble.center.y + _point.y);
     // 边界碰撞判断
     CGPoint tempPoint = _point;
+
     if (leftOrRight == 0) {
-        if (_bubble.center.x  >  SCREEN_WIDTH/2 - _radius || _bubble.center.x < _radius) {
+        if (_bubble.center.x > SCREEN_WIDTH/2 -_radius && _point.x > 0) {
+            tempPoint.x = - _point.x;
+            _point = tempPoint;
+        }else
+        if (_bubble.center.x < _radius && _point.x < 0) {
             tempPoint.x = - _point.x;
             _point = tempPoint;
         }
     }else{
-        if (_bubble.center.x < SCREEN_WIDTH / 2 + _radius || _bubble.center.x > SCREEN_WIDTH - _radius ) {
+        if (_bubble.center.x < SCREEN_WIDTH/2 + _radius && _point.x < 0) {
             tempPoint.x = - _point.x;
             _point = tempPoint;
+        }else
+        if (_bubble.center.x > SCREEN_WIDTH - _radius &&  _point.x > 0) {
+                tempPoint.x = - _point.x;
+                _point = tempPoint;
         }
     }
     if (_bubble.center.y < _radius ) {
@@ -76,12 +85,12 @@
         [_displayLink invalidate];
         _displayLink = nil;
         
-        AppDelegate *myDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-        myDelegate.numberOfBubbles = myDelegate.numberOfBubbles -1;
+        if ([self.delegate respondsToSelector:@selector(substractNumber)]) {
+            [self.delegate substractNumber];
+        }
     }
     
     [self bringSubviewToFront:_bubble];
-    
 }
 
 // 生成m~n之间的随机整数

@@ -7,28 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3358297523B2095900E4D0D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3358297423B2095900E4D0D3 /* AppDelegate.m */; };
-		3358297823B2095900E4D0D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3358297723B2095900E4D0D3 /* ViewController.m */; };
 		3358297B23B2095900E4D0D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3358297923B2095900E4D0D3 /* Main.storyboard */; };
 		3358297D23B2095B00E4D0D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3358297C23B2095B00E4D0D3 /* Assets.xcassets */; };
 		3358298023B2095B00E4D0D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3358297E23B2095B00E4D0D3 /* LaunchScreen.storyboard */; };
 		3358298323B2095B00E4D0D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3358298223B2095B00E4D0D3 /* main.m */; };
-		33A284F823B3108F0050AD97 /* Bubble.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A284F723B3108F0050AD97 /* Bubble.m */; };
+		33CFA1B123B6F2E6003630A8 /* BubbleBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CFA1AD23B6F2E6003630A8 /* BubbleBackground.m */; };
+		33CFA1B223B6F2E6003630A8 /* Bubble.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CFA1AE23B6F2E6003630A8 /* Bubble.m */; };
+		33CFA1B323B6F2E6003630A8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CFA1AF23B6F2E6003630A8 /* AppDelegate.m */; };
+		33CFA1B423B6F2E6003630A8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CFA1B023B6F2E6003630A8 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3358297023B2095900E4D0D3 /* BubbleDEMO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BubbleDEMO.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3358297323B2095900E4D0D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		3358297423B2095900E4D0D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3358297623B2095900E4D0D3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3358297723B2095900E4D0D3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3358297A23B2095900E4D0D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3358297C23B2095B00E4D0D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3358297F23B2095B00E4D0D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3358298123B2095B00E4D0D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3358298223B2095B00E4D0D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		33A284F623B3108F0050AD97 /* Bubble.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bubble.h; sourceTree = "<group>"; };
-		33A284F723B3108F0050AD97 /* Bubble.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bubble.m; sourceTree = "<group>"; };
+		33CFA1A923B6F2E5003630A8 /* Bubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bubble.h; sourceTree = "<group>"; };
+		33CFA1AA23B6F2E5003630A8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		33CFA1AB23B6F2E6003630A8 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		33CFA1AC23B6F2E6003630A8 /* BubbleBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleBackground.h; sourceTree = "<group>"; };
+		33CFA1AD23B6F2E6003630A8 /* BubbleBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleBackground.m; sourceTree = "<group>"; };
+		33CFA1AE23B6F2E6003630A8 /* Bubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bubble.m; sourceTree = "<group>"; };
+		33CFA1AF23B6F2E6003630A8 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		33CFA1B023B6F2E6003630A8 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,12 +64,14 @@
 		3358297223B2095900E4D0D3 /* BubbleDEMO */ = {
 			isa = PBXGroup;
 			children = (
-				3358297323B2095900E4D0D3 /* AppDelegate.h */,
-				3358297423B2095900E4D0D3 /* AppDelegate.m */,
-				3358297623B2095900E4D0D3 /* ViewController.h */,
-				3358297723B2095900E4D0D3 /* ViewController.m */,
-				33A284F623B3108F0050AD97 /* Bubble.h */,
-				33A284F723B3108F0050AD97 /* Bubble.m */,
+				33CFA1AA23B6F2E5003630A8 /* AppDelegate.h */,
+				33CFA1AF23B6F2E6003630A8 /* AppDelegate.m */,
+				33CFA1A923B6F2E5003630A8 /* Bubble.h */,
+				33CFA1AE23B6F2E6003630A8 /* Bubble.m */,
+				33CFA1AC23B6F2E6003630A8 /* BubbleBackground.h */,
+				33CFA1AD23B6F2E6003630A8 /* BubbleBackground.m */,
+				33CFA1AB23B6F2E6003630A8 /* ViewController.h */,
+				33CFA1B023B6F2E6003630A8 /* ViewController.m */,
 				3358297923B2095900E4D0D3 /* Main.storyboard */,
 				3358297C23B2095B00E4D0D3 /* Assets.xcassets */,
 				3358297E23B2095B00E4D0D3 /* LaunchScreen.storyboard */,
@@ -146,10 +151,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3358297823B2095900E4D0D3 /* ViewController.m in Sources */,
+				33CFA1B323B6F2E6003630A8 /* AppDelegate.m in Sources */,
+				33CFA1B223B6F2E6003630A8 /* Bubble.m in Sources */,
 				3358298323B2095B00E4D0D3 /* main.m in Sources */,
-				3358297523B2095900E4D0D3 /* AppDelegate.m in Sources */,
-				33A284F823B3108F0050AD97 /* Bubble.m in Sources */,
+				33CFA1B123B6F2E6003630A8 /* BubbleBackground.m in Sources */,
+				33CFA1B423B6F2E6003630A8 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

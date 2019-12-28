@@ -7,16 +7,32 @@
 //
 
 #import "AppDelegate.h"
-
+#import "BubbleBackground.h"
+#import "ViewController.h"
 @interface AppDelegate ()
-
 @end
 
 @implementation AppDelegate
-
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window.rootViewController = [[ViewController alloc] init];
+    [self.window makeKeyAndVisible];
+
+
+    BubbleBackground *bubbleView = [[BubbleBackground alloc] initWithFrame:self.window.bounds];
+    bubbleView.maxNumberOfBubbles = 9;
+    bubbleView.backgroundColor = [UIColor blueColor];
+    [self.window addSubview:bubbleView];
+    [UIView animateWithDuration:15.0 animations:^{
+        
+        CATransform3D transform = CATransform3DMakeScale(1.0, 1.0, 1.1);
+        bubbleView.layer.transform = transform;
+        // bubbleView.alpha = 0.0;
+    } completion:^(BOOL finished) {
+        [bubbleView  removeFromSuperview];
+    }];
+
     return YES;
 }
 
